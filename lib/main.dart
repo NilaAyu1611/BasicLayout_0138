@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -114,6 +115,26 @@ class MyWeatherScreen extends StatelessWidget {
         ),
       ),
     ); 
+  }
+
+  Widget _weatherColumn(String time) {
+    return Column(
+      children: [
+        Text(
+          time,
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 5),
+        const Icon(LucideIcons.snowflake, color: Color.fromARGB(255, 9, 114, 166)),
+        const Text('28°C', style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 61, 111, 152))),
+        const SizedBox(height: 5),
+        const Icon(LucideIcons.wind, color: Color.fromARGB(255, 110, 14, 8)),
+        const Text('10 km/h', style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 144, 7, 7))),
+        const SizedBox(height: 5),
+        const Icon(LucideIcons.umbrella, color: Colors.black),
+        const Text('0%', style: TextStyle(fontSize: 16, color: Colors.black)),
+      ],
+    );
   }
 }
 
