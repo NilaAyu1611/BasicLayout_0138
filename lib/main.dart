@@ -104,11 +104,16 @@ class MyWeatherScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const Spacer(),
+            const Text(
+              'Developed by: nilaayucitrawulan.id',
+              style: TextStyle(fontSize: 14, color: Colors.black),
+            ),
+            const SizedBox(height: 10),
           ],
         ),
-        ),
-    );
-      
-}
+      ),
+    ); 
+  }
 }
 
